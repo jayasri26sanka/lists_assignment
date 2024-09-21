@@ -9,6 +9,7 @@ def show_main_menu():
     print('N for a new order')
     print("C to change your current order")
     print('X to close orders and print the check')
+    print('R to reset the order')
     print('Q for quit')
     user_menu_choice = input('Your choice: ')
     if user_menu_choice in 'Qq':
@@ -24,6 +25,9 @@ def show_main_menu():
         ordered_item = functions.get_item_number()
         my_order.append(ordered_item)
       print('Your Current order is', my_order)  
+    elif user_menu_choice in 'Rr':
+       my_order=[]
+       print('Order is reset')
     else:
       make_order(user_menu_choice.upper())  #calls a function for adding to the orders
     
